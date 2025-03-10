@@ -4,7 +4,7 @@ import 'registration_screen.dart';
 import 'login_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lottie/lottie.dart';
+//import 'package:lottie/lottie.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: camel_case_types
@@ -15,6 +15,7 @@ class welcomeScreen extends StatefulWidget {
   State<welcomeScreen> createState() => _welcomeScreenState();
 }
 
+// ignore: camel_case_types
 class _welcomeScreenState extends State<welcomeScreen> {
 
   Future<bool?> _onBackPressed() async {
@@ -91,7 +92,7 @@ class _welcomeScreenState extends State<welcomeScreen> {
                             blurRadius: 3,
                             offset: Offset(0, 5))
                       ],
-                      color: Colors.deepPurple,
+                      color: Colors.indigo[700],
                       borderRadius: BorderRadius.circular(12),
                     ),
                     child: Row(
@@ -110,16 +111,16 @@ class _welcomeScreenState extends State<welcomeScreen> {
                                   color: Colors.white,
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(
-                                    color: Colors.deepPurple,
+                                    color: Colors.indigo[700]!,
                                     width: 0.9,
                                   )
                                   //textColor: Colors.black87,
                                   ),
-                              child: const Center(
+                              child: Center(
                                 child: Text(
                                   'Register',
                                   style: TextStyle(
-                                    color: Colors.deepPurple,
+                                    color: Colors.indigo[700],
                                     fontWeight: FontWeight.bold,
                                     fontSize: 15,
                                   ),
@@ -141,10 +142,10 @@ class _welcomeScreenState extends State<welcomeScreen> {
                             },
                             child: Container(
                               decoration: BoxDecoration(
-                                  color: Colors.deepPurple,
+                                  color: Colors.indigo[700],
                                   borderRadius: BorderRadius.circular(12),
                                   border: Border.all(
-                                    color: Colors.deepPurple,
+                                    color: Colors.indigo[700]!,
                                     width: 0.9,
                                   )
                                   //textColor: Colors.black87,

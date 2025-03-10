@@ -9,6 +9,8 @@
 
 void CreateAndAttachConsole() {
   if (::AllocConsole()) {
+    std::cout << "Console allocated successfully." << std::endl; // Debugging statement
+
     FILE *unused;
     if (freopen_s(&unused, "CONOUT$", "w", stdout)) {
       _dup2(_fileno(stdout), 1);
@@ -19,13 +21,21 @@ void CreateAndAttachConsole() {
     std::ios::sync_with_stdio();
     FlutterDesktopResyncOutputStreams();
   }
+  else {
+    std::cerr << "Failed to allocate console." << std::endl; // Debugging statement
+  }
 }
 
-std::vector<std::string> GetCommandLineArguments() {
+
+std::vector<std::string> GetCommandLineArguments() { 
+  std::cout << "Retrieving command line arguments." << std::endl; // Debugging statement
+
   // Convert the UTF-16 command line arguments to UTF-8 for the Engine to use.
   int argc;
   wchar_t** argv = ::CommandLineToArgvW(::GetCommandLineW(), &argc);
-  if (argv == nullptr) {
+  if (argv == nullptr) { 
+    std::cerr << "Failed to retrieve command line arguments." << std::endl; // Debugging statement
+
     return std::vector<std::string>();
   }
 
