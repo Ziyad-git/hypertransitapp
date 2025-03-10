@@ -36,6 +36,11 @@ dependencies:
   cupertino_icons: ^1.0.8
   google_fonts: ^6.2.1
   lottie: ^3.3.1
+  flutter_polyline_points: ^2.1.0
+  google_maps_flutter: ^2.1.7
+  location: ^4.4.0
+  flutter_svg: ^1.1.0
+
 
 dev_dependencies:
   flutter_test:
@@ -63,6 +68,7 @@ flutter:
   assets:
     - assets/bus.png
     - assets/userlogo.png
+    - assets/busmap.png
     
 
   # An image asset can refer to one or more resolution-specific "variants", see
